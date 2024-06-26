@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+    <link rel="stylesheet" href="/public/cadatro.css">
+    <link rel="shortcut icon" href="public/image.png" type="image/x-icon">
+</head>
+<body>
+    <div class="center">
+        <div class="container">
+            <form  method="POST">
+                <h1 class="titulo_cadastro">Criar uma nova conta</h1>
+                <input type="text" name="usuario" id="usuario" placeholder="Usuario">
+                <input type="text" name="email" id="email" placeholder="E-mail">
+                <div class="container_senha">
+                    <input type="password" name="senha" id="senha" placeholder="Senha">
+                    <i class="fa-solid fa-eye  icone2" onclick="alterar_senha();"></i>
+                    <i class="fa-solid fa-eye-slash icone1" onclick="alterar_senha2();"></i>
+                </div>
+                
+                <input type="submit" value="Cadastrar" name="acao">
+                <a href="/" class="logar">Já tem uma conta? Clique aqui!</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/c367150456.js" crossorigin="anonymous"></script>
+    <script>
+
+        const icone1 = document.querySelector('.icone1');
+        const icone2 = document.querySelector('.icone2');
+        const input = document.querySelector('#senha');
+
+        function alterar_senha2(){
+            icone1.style.display = 'none';
+            icone2.style.display = 'block';
+            input.type = 'text';
+        }
+
+        function alterar_senha(){
+            icone1.style.display = 'block';
+            icone2.style.display = 'none';
+            input.type = 'password';
+        }
+    </script>
+</body>
+</html>

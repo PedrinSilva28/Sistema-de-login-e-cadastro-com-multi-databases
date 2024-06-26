@@ -1,0 +1,12 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
