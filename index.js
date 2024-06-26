@@ -42,7 +42,7 @@ app.set('views', path.join(__dirname, '/views'));
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '@Darque28',
+    password: 'sua senha',
     database: 'users'
 })
 
@@ -81,7 +81,7 @@ app.post('/',(req,res)=>{
                 req.session.bancoDeDados = {
                     host: 'localhost',
                     user: 'root',
-                    password: '@Darque28',
+                    password: 'sua senha',
                     database: `user_${result[0].id}`
                 };
     
@@ -132,7 +132,7 @@ app.post('/cadastro',(req,res)=>{
                     req.session.bancoDeDados = {
                         host: 'localhost',
                         user: 'root',
-                        password: '@Darque28',
+                        password: 'sua senha',
                         database: `user_${result[0].id}`
                     };
      
